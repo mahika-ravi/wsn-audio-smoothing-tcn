@@ -19,9 +19,16 @@ This system is **predictive** — it forecasts degradation and adapts
 codec settings before quality drops.
 
 ## Architecture
-Network Telemetry → TCN Prediction Engine → Decision Controller → Codec Adapter → Audio Output
-↑                                                                                        |
-└────────────────────────────────── Feedback Loop ──────────────────────────────────────┘
+
+| Stage | Component |
+|---|---|
+| 1 | Network Telemetry Monitor |
+| 2 | TCN Prediction Engine |
+| 3 | Decision Controller |
+| 4 | Codec Adapter |
+| 5 | Audio Output |
+
+Continuous feedback loop from output back to telemetry monitor.
 
 ## TCN Model
 - 8 temporal convolutional layers
